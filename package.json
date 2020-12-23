@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
-    "test:watch": "yarn test --watch",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "test:watch": "npm run test --watch",
+    "generate": "npx plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public"
   },
@@ -29,7 +29,8 @@
     "next-pwa": "^3.1.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "styled-components": "5.2.1"
+    "styled-components": "5.2.1",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
