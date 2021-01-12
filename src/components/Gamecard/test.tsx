@@ -64,6 +64,11 @@ describe('<Gamecard />', () => {
   })
 
   it('should render correctly gamecard with ribbon', () => {
-    renderWithTheme(<Gamecard {...props} favorite />)
+    renderWithTheme(<Gamecard {...props} favorite ribbon="My Ribbon" />)
+    const ribbon = screen.getByText('My Ribbon')
+
+    expect(ribbon).toBeInTheDocument()
+    expect(ribbon).toHaveStyle({ backgroundColor: '#F231A5' })
+    expect(ribbon).toHaveStyle({ height: '3.6rem', fontSize: '1.4rem' })
   })
 })
