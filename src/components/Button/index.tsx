@@ -7,6 +7,7 @@ type ButtonTypes =
 
 export type ButtonProps = {
   size?: 'small' | 'medium' | 'large'
+  minimal?: boolean
   fullWidth?: boolean
   icon?: JSX.Element
   as?: React.ElementType
@@ -15,11 +16,18 @@ export type ButtonProps = {
 const Button = ({
   children,
   icon,
+  minimal = false,
   size = 'medium',
   fullWidth = false,
   ...props
 }: ButtonProps) => (
-  <S.Wrapper size={size} hasIcon={!!icon} fullWidth={fullWidth} {...props}>
+  <S.Wrapper
+    size={size}
+    hasIcon={!!icon}
+    fullWidth={fullWidth}
+    minimal={minimal}
+    {...props}
+  >
     {!!icon && icon}
     {!!children && <span>{children}</span>}
   </S.Wrapper>

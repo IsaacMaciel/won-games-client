@@ -36,7 +36,7 @@ describe('<Button />', () => {
 
   it('should render a fullWidth version', () => {
     renderWithTheme(<Button fullWidth>Won Games</Button>)
-    expect(screen.getByRole('button', { name: /Won Games/i })).toHaveStyle({
+    expect(screen.getByRole('button', { name: /won games/i })).toHaveStyle({
       width: '100%'
     })
   })
@@ -45,8 +45,21 @@ describe('<Button />', () => {
     renderWithTheme(
       <Button icon={<AddShoppingCart data-testid="icon" />}>Won Games</Button>
     )
-    expect(screen.getByText(/Won Games/i)).toBeInTheDocument()
+    expect(screen.getByText(/won games/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+
+  it('should render a minimal version', () => {
+    renderWithTheme(
+      <Button icon={<AddShoppingCart data-testid="icon" />} minimal>
+        Won Games
+      </Button>
+    )
+
+    expect(screen.getByRole('button', { name: /won games/i })).toHaveStyle({
+      background: 'none',
+      color: '#F231A5'
+    })
   })
   it('should render Button as a link', () => {
     renderWithTheme(
