@@ -25,7 +25,7 @@ const Auth = ({ children, title }: AuthProps) => (
     </S.BannerBlock>
 
     <S.Content>
-      <Logo color="black" size="large" />
+      <Logo color="black" size="large" id="content" />
       <Heading color="black" lineColor="secondary" lineLeft>
         {title}
       </Heading>
