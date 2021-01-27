@@ -27,6 +27,11 @@ export const BannerBlock = styled.div`
       display: none;
     `}
 
+    a {
+      width: fit-content;
+      height: fit-content;
+    }
+
     &:after {
       content: '';
       position: absolute;
