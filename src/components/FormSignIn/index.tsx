@@ -4,7 +4,8 @@ import { Email, Lock } from '@styled-icons/material-outlined'
 import Button from 'components/Button'
 import TextField from 'components/TextField'
 
-import * as S from './styles'
+import { ForgotPassword as SForgotPassword } from './styles'
+import * as S from '../Form'
 
 const FormSignIn = () => (
   <S.Wrapper>
@@ -21,7 +22,7 @@ const FormSignIn = () => (
         type="password"
         icon={<Lock />}
       />
-      <S.ForgotPassword href="#">Forgot your password?</S.ForgotPassword>
+      <SForgotPassword href="#">Forgot your password?</SForgotPassword>
 
       <Button size="large" fullWidth>
         Sign in now
