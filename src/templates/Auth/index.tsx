@@ -7,29 +7,32 @@ type AuthProps = {
   children: React.ReactNode
 }
 
-const Auth = ({ children, title }: AuthProps) => (
+const Auth = ({ title, children }: AuthProps) => (
   <S.Wrapper>
     <S.BannerBlock>
       <S.BannerContent>
-        <Logo />
+        <Logo id="banner" />
 
         <div>
-          <Heading size="huge"> All your favorite games in one place</Heading>
-          <S.SubTitle>
+          <Heading size="huge">All your favorite games in one place</Heading>
+          <S.Subtitle>
             <strong>WON</strong> is the best and most complete gaming platform.
-          </S.SubTitle>
+          </S.Subtitle>
         </div>
 
-        <S.Footer> Won Games 2020 todos os direitos Reservados</S.Footer>
+        <S.Footer>Won Games 2020 © Todos os Direitos Reservados</S.Footer>
       </S.BannerContent>
     </S.BannerBlock>
 
     <S.Content>
-      <Logo color="black" size="large" id="content" />
-      <Heading color="black" lineColor="secondary" lineLeft>
-        {title}
-      </Heading>
-      {children}
+      <S.ContentWrapper>
+        <Logo id="content" color="black" size="large" />
+        <Heading color="black" lineColor="secondary" lineLeft>
+          {title}
+        </Heading>
+
+        {children}
+      </S.ContentWrapper>
     </S.Content>
   </S.Wrapper>
 )

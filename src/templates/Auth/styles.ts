@@ -52,7 +52,7 @@ export const BannerContent = styled.div`
   `}
 `
 
-export const SubTitle = styled.h3`
+export const Subtitle = styled.h3`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xxlarge};
     font-weight: ${theme.font.light};
