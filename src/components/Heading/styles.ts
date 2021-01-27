@@ -15,7 +15,10 @@ const wrapperModifiers = {
     font-size: ${theme.font.sizes.xxlarge};
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xxlarge}
-    `};
+    `}
+  `,
+  huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.huge};
   `,
 
   lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
