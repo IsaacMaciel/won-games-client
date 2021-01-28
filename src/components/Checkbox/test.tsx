@@ -51,6 +51,6 @@ describe('<Checkbox />', () => {
 
     userEvent.tab()
 
-    expect(screen.getAllByLabelText(/checkbox/i)).toHaveFocus()
+    expect(screen.getByLabelText(/checkbox/i)).toHaveFocus()
   })
 })
