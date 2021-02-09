@@ -74,4 +74,10 @@ describe('<GameDetails />', () => {
 
     expect(screen.getByText('2k')).toBeInTheDocument
   })
+
+  it('should render developer', () => {
+    renderWithTheme(<GameDetails {...props} />)
+
+    expect(screen.getByText('Different Tales')).toBeInTheDocument
+  })
 })
