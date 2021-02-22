@@ -12,3 +12,17 @@ export default {
 } as Meta
 
 export const Default: Story<GameItemProps> = (args) => <GameItem {...args} />
+
+export const WithPayment: Story<GameItemProps> = (args) => (
+  <GameItem {...args} />
+)
+
+WithPayment.args = {
+  downloadLink: 'http://link',
+  paymentInfo: {
+    flag: 'mastercard',
+    img: '/img/master-card.png',
+    number: '**** **** **** 4326',
+    purchaseDate: 'Purchase made on 07/20/2021 at 20:32'
+  }
+}
