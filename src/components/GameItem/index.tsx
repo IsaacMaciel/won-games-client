@@ -14,7 +14,7 @@ export type GameItemProps = {
   title: string
   price: string
   downloadLink?: string
-  paymentInfo: PaymentInfo
+  paymentInfo?: PaymentInfo
 }
 
 const GameItem = ({
