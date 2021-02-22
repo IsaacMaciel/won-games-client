@@ -48,10 +48,10 @@ export async function getStaticProps() {
       },
       gallery: galleryMock,
       description: descriptionHTML,
-      details: detailsMock
-    },
-    upcommingGames: gamesMock,
-    upcommingHighlight: highlighMock,
-    recommendedGames: gamesMock
+      details: detailsMock,
+      upcommingGames: gamesMock,
+      upcommingHighlight: highlighMock,
+      recommendedGames: gamesMock
+    }
   }
 }
