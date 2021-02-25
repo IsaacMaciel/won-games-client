@@ -5,22 +5,21 @@ import * as S from './styles'
 export type TextFieldProps = {
   onInput?: (value: string) => void
   label?: string
-  labelFor?: string
   initialValue?: string
-  icon?: JSX.Element
-  iconPosition?: 'right' | 'left'
+  icon?: React.ReactNode
+  iconPosition?: 'left' | 'right'
   disabled?: boolean
   error?: string
 } & InputHTMLAttributes<HTMLInputElement>
 
 const TextField = ({
-  label,
   icon,
   iconPosition = 'left',
-  labelFor = '',
+  label,
+  name,
   initialValue = '',
+  error,
   disabled = false,
-  error = '',
   onInput,
   ...props
 }: TextFieldProps) => {
@@ -34,16 +33,18 @@ const TextField = ({
   }
 
   return (
-    <S.Wrapper error={error} disabled={disabled}>
-      {!!label && <S.Label htmlFor={labelFor}>{label}</S.Label>}
+    <S.Wrapper disabled={disabled} error={error}>
+      {!!label && <S.Label htmlFor={name}>{label}</S.Label>}
       <S.InputWrapper>
         {!!icon && <S.Icon iconPosition={iconPosition}>{icon}</S.Icon>}
         <S.Input
-          disabled={disabled}
           type="text"
           onChange={onChange}
           value={value}
           iconPosition={iconPosition}
+          disabled={disabled}
+          name={name}
+          {...(label ? { id: name } : {})}
           {...props}
         />
       </S.InputWrapper>
